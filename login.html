@@ -15,8 +15,12 @@
           <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
           <style>
+                    * {}
+
                     body {
                               font-family: "Geist", sans-serif;
+                              background-color: #F2F2F2;
+
 
                     }
           </style>
@@ -24,24 +28,29 @@
 </head>
 
 <body>
-          <div class="max-w-lg shadow-lg mx-auto mt-14 rounded-sm">
-                    <div class="p-8 flex justify-center items-center flex-col ">
-                              <img src="./assets/github-logo.png" alt="" class=""><br>
-                              <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
-                              <p class="text-[#64748bFF]">Sign in to manage your issues</p>
+          <div class=" h-[100vh] flex justify-center items-center">
+                    <div class="h-[650px] w-[520px] bg-white rounded-md shadow-2xl p-6 ">
+                              <div class="text-center space-y-3">
+                                        <div class="flex justify-center items-center">
+                                                  <img src="./assets/github-logo.png" alt="" class="">
+                                        </div>
+                                        <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
+                                        <p class="text-[#64748bFF]">Sign in to manage your issues</p>
+                              </div><br>
+
+
+                              <div class="space-y-5">
+                                        <label class="">Username</label>
+                                        <input id="userName" type="text" class="input w-full"
+                                                  placeholder="Enter Username" />
+
+                                        <label class="">Password</label>
+                                        <input id="userPassword" type="password" class="input w-full"
+                                                  placeholder="Enter Password" />
+
+                                        <button id="userButton" class="btn btn-primary mt-4 w-full">Login</button>
+                              </div>
                     </div>
-                    <div class="p-8 space-y-3">
-
-                              <label class="">Username</label><br>
-                              <input id="userName" type="text" class="input w-full" placeholder="Enter Username" />
-
-                              <label class="">Password</label><br>
-                              <input id="userPassword" type="password" class="input w-full" placeholder="Enter Password" />
-
-                              <button id="userButton" class="btn btn-primary mt-4 w-full">Login</button>
-                    </div>
-
-
 
           </div>
 

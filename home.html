@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
+          <!-- tailwind + daisyui CDN-->
+          <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+          <!--Google font CDN -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+          <style>
+                    body {
+                              font-family: "Geist", sans-serif;
+
+                    }
+          </style>
+          <title>Home Page</title>
 </head>
+
 <body>
-          <h1>sobuj</h1>
+          <div class="max-w-[1600px]  mx-auto">
+                    <header>
+                              <div class="mx-20 my-5 flex justify-between">
+                                        <!-- div-right -->
+                                        <div class="flex items-center gap-4">
+                                                  <img src="./assets/github-logo.png" alt="" class="h-9 w-9">
+                                                  <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
+                                        </div>
+                                        <!-- div-left -->
+                                        <div class="flex gap-3">
+                                                  <div>
+
+                                                            <label class="input">
+                                                                      <svg class="h-[1em] opacity-50"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 24 24">
+                                                                                <g stroke-linejoin="round"
+                                                                                          stroke-linecap="round"
+                                                                                          stroke-width="2.5" fill="none"
+                                                                                          stroke="currentColor">
+                                                                                          <circle cx="11" cy="11" r="8">
+                                                                                          </circle>
+                                                                                          <path d="m21 21-4.3-4.3">
+                                                                                          </path>
+                                                                                </g>
+                                                                      </svg>
+                                                                      <input type="search" required
+                                                                                placeholder="Search" />
+                                                            </label>
+                                                  </div>
+
+                                                  <button class="btn btn-primary text-white"> + New issue</button>
+                                        </div>
+                              </div>
+
+                    </header>
+
+
+
+
+
+
+
+
+          </div>
+          <hr class="text-gray-400 ">
+
+          <main class="max-w-[1600px]  bg-[#F8FAFC]"><br><br>
+                    <div class="max-w-[1110px] mx-auto ">
+                              <!-- button 3 -->
+                              <div class="shadow-md  rounded-md bg-white" id="btn">
+                                        <div class="flex justify-start gap-4 p-5">
+                                                  <button id="btn" class="btn h-10 w-28 btn-outline">All</button>
+                                                  <button class="btn h-10 w-28 btn-outline">Open</button>
+                                                  <button class="btn h-10 w-28 btn-outline">Closed</button>
+                                        </div>
+                              </div><br><br>
+
+                              <!-- all card -->
+                              <div id="treesContainer" class="grid grid-cols-1 sm:grid-cols-6 gap-6">
+
+                              </div>
+
+
+
+
+                    </div>
+          </main>
+
+          <script src="./home.js"></script>
 </body>
+
 </html>
