@@ -68,6 +68,8 @@ hideLoading()
 
 }
 
+
+
 loadAllCard();
 
 // "id": 1,
