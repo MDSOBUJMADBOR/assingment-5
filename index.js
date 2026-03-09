@@ -10,7 +10,7 @@ const userPasswordValue = userPassword.value;
 
 if(userInputValue === "admin" && userPasswordValue === "admin123") {
           alert("Login Successfully");
-          window.location.assign("home.html");
+          window.location.assign("./home.html");
 
 }
 else {

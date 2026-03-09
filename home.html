@@ -32,30 +32,23 @@
                                                   <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
                                         </div>
                                         <!-- div-left -->
-                                        <div class="flex gap-3">
-                                                  <div>
+                                        <div>
+                                                  <section class="flex justify-center mt-5">
+                                                            <div class="join">
+                                                                      <label class="input validator">
 
-                                                            <label class="input">
-                                                                      <svg class="h-[1em] opacity-50"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                viewBox="0 0 24 24">
-                                                                                <g stroke-linejoin="round"
-                                                                                          stroke-linecap="round"
-                                                                                          stroke-width="2.5" fill="none"
-                                                                                          stroke="currentColor">
-                                                                                          <circle cx="11" cy="11" r="8">
-                                                                                          </circle>
-                                                                                          <path d="m21 21-4.3-4.3">
-                                                                                          </path>
-                                                                                </g>
-                                                                      </svg>
-                                                                      <input type="search" required
-                                                                                placeholder="Search" />
-                                                            </label>
-                                                  </div>
-
-                                                  <button class="btn btn-primary text-white"> + New issue</button>
+                                                                                <input id="input-search" type="text"
+                                                                                          placeholder="Search issues..."
+                                                                                          required />
+                                                                      </label>
+                                                                      <button id="btn-search"
+                                                                                class="btn btn-primary join-item"> + New
+                                                                                Issue </button>
+                                                            </div>
+                                                  </section>
                                         </div>
+
+
                               </div>
 
                     </header>
@@ -70,29 +63,189 @@
           </div>
           <hr class="text-gray-400 ">
 
-          <main class="max-w-[1600px]  bg-[#F8FAFC]"><br><br>
+          <main class="max-w-[1600px] mx-auto  bg-[#F8FAFC] "><br>
                     <div class="max-w-[1110px] mx-auto ">
                               <!-- button 3 -->
-                              <div class="shadow-md  rounded-md bg-white" id="btn">
+                              <div class="shadow-md  rounded-md bg-white">
                                         <div class="flex justify-start gap-4 p-5">
-                                                  <button id="btn" class="btn h-10 w-28 btn-outline">All</button>
-                                                  <button class="btn h-10 w-28 btn-outline">Open</button>
-                                                  <button class="btn h-10 w-28 btn-outline">Closed</button>
+                                                  <div id="categoriesContainer" class="flex gap-4">
+                                                            <button id="all"
+                                                                      class="btn h-10 w-28 btn-primary">All</button>
+
+                                                            <button id="open" class="btn h-10 w-28 btn-outline"
+                                                                      value="open">Open</button>
+                                                            <button id="closed" class="btn h-10 w-28 btn-outline"
+                                                                      value="closed">Closed</button>
+                                                  </div>
                                         </div>
-                              </div><br><br>
+                              </div><br>
 
-                              <!-- all card -->
-                              <div id="treesContainer" class="grid grid-cols-1 sm:grid-cols-6 gap-6">
 
+
+                              <div class="bg-white flex justify-between items-center p-5 rounded-sm shadow-md">
+                                        <!-- left -->
+                                        <div class="flex items-center gap-3">
+                                                  <div><img src="./assets/Aperture.png" alt=""></div>
+                                                  <div>
+                                                            <h2 class="text-xl font-semibold"> <span id="allCount"> 50
+                                                                      </span> Issues
+                                                            </h2>
+                                                            <p class="text-gray-400">Track and manage your project
+                                                                      issues</p>
+                                                  </div>
+                                        </div>
+                                        <!-- right -->
+                                        <div>
+                                                  <ul type="dise" class="flex gap-4">
+                                                            <li>Open</li>
+                                                            <li>Closed</li>
+                                                  </ul>
+                                        </div>
                               </div>
 
+                              <!-- all card -->
+                              <div class="my-5">
+                                        <div id="treesContainer" class="grid grid-cols-3  gap-3 ">
+                                                  <!-- Dynamic card -->
+                                                  <!-- <div
+                                                            class="max-w-[380px] border-t-4 border-red-400 bg-white rounded-sm shadow-md">
+                                                            <div class="flex justify-between p-4">
+                                                                      <img src="./assets/Open-Status.png" alt="">
+                                                                      <p
+                                                                                class="uppercase bg-[#FEECEC] py-2 px-4 rounded-lg text-[#EF4444]">
+                                                                                High</p>
+
+                                                            </div>
+                                                            <div class="p-4">
+                                                                      <h2 class="text-[14px] font-bold">Fix navigation
+                                                                                menu on
+                                                                                mobile devices</h2>
+                                                                      <p class="text-gray-300 line-clamp-2">The
+                                                                                navigation menu
+                                                                                doesn't collapse properly on mobile
+                                                                                devices...</p>
+                                                            </div>
+                                                            <div class="flex gap-5 justify-between p-4">
+                                                                      <p
+                                                                                class="uppercase bg-[#FEECEC] py-2 px-4 rounded-lg text-[#EF4444]">
+                                                                                Bug</p>
+                                                                      <p
+                                                                                class="uppercase bg-[#FFF8DB] py-2 px-4 rounded-lg text-[#D97706]">
+                                                                                help wanted</p>
+                                                            </div>
+
+                                                            <div
+                                                                      class="text-gray-300 space-y-3 p-4 border-t-2 border-gray-300 ">
+                                                                      <p>#1 by john_doe</p>
+                                                                      <p>1/15/2024</p>
+                                                            </div>
+                                                  </div> -->
+
+
+                                        </div>
+                                        <div id="openContainer">
+                                                  <!-- <div
+                                                            class="max-w-[380px] border-t-4 border-red-400 bg-white rounded-sm shadow-md">
+                                                            <div class="flex justify-between p-4">
+                                                                      <img src="./assets/Open-Status.png" alt="">
+                                                                      <p
+                                                                                class="uppercase bg-[#FEECEC] py-2 px-4 rounded-lg text-[#EF4444]">
+                                                                                High</p>
+
+                                                            </div>
+                                                            <div class="p-4">
+                                                                      <h2 class="text-[14px] font-bold">Fix navigation
+                                                                                menu on
+                                                                                mobile devices</h2>
+                                                                      <p class="text-gray-300 line-clamp-2">The
+                                                                                navigation menu
+                                                                                doesn't collapse properly on mobile
+                                                                                devices...</p>
+                                                            </div>
+                                                            <div class="flex gap-5 justify-between p-4">
+                                                                      <p
+                                                                                class="uppercase bg-[#FEECEC] py-2 px-4 rounded-lg text-[#EF4444]">
+                                                                                Bug</p>
+                                                                      <p
+                                                                                class="uppercase bg-[#FFF8DB] py-2 px-4 rounded-lg text-[#D97706]">
+                                                                                help wanted</p>
+                                                            </div>
+
+                                                            <div
+                                                                      class="text-gray-300 space-y-3 p-4 border-t-2 border-gray-300 ">
+                                                                      <p>#1 by john_doe</p>
+                                                                      <p>1/15/2024</p>
+                                                            </div>
+                                                  </div> -->
+
+
+                                        </div>
+
+                                        <!-- loading spinner -->
+                                        <div id="loadingSpinner"
+                                                  class="h-[60vh] flex hidden justify-center items-center">
+                                                  <span class="loading loading-spinner loading-xl"></span>
+                                        </div>
+                              </div>
 
 
 
                     </div>
           </main>
 
+
+          <!-- Open the modal using ID.showModal() method -->
+          <!-- <button class="btn" onclick="cardDetailsModal">open modal</button> -->
+          <dialog id="tree-details-modal" class="modal">
+
+                    <div class="modal-box">
+                              <div class="space-y-6">
+                                        <div class="flex justify-between">
+                                                  <img src="./assets/Open-Status.png" alt="">
+                                                  <p id="high"
+                                                            class="uppercase bg-[#FEECEC] py-2 px-4 rounded-lg text-[#EF4444]">
+                                                  </p>
+                                        </div>
+                                        <div>
+                                                  <h2 id="title" class="text-[20px] font-bold"></h2>
+                                                  <p id="description" class="text-gray-300 line-clamp-2"></p>
+                                        </div>
+                                        <div>
+                                                  <div id="label" class=" bg-yellow-100 inline-block"></div>
+                                        </div>
+                                        <hr>
+                                        <div class=" text-xs text-gray-400">
+                                                  <div class="flex justify-between">
+                                                            <p id="author"></p>
+                                                            <p id="createdAt"></p>
+                                                  </div>
+                                                  <div class="flex justify-between">
+                                                            <p id="assignee"></p>
+                                                            <p id="updatedAt"></p>
+                                                  </div>
+
+
+                                        </div>
+
+
+                              </div>
+
+
+
+                              <div class="modal-action">
+                                        <form method="dialog">
+                                                  <!-- if there is a button in form, it will close the modal -->
+                                                  <button class="btn">Close</button>
+                                        </form>
+                              </div>
+                    </div>
+
+          </dialog>
+
+
+
           <script src="./home.js"></script>
+          <script src="./agane-home.js"></script>
 </body>
 
 </html>
