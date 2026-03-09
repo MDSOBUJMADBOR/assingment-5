@@ -88,9 +88,19 @@ loadAllCard();
 
 // Display cards
 function displayIssues(issues) {
+  console.log(issues);
   treesContainer.innerHTML = "";
 
   issues.forEach(issue => {
+
+// const label = issue.labels
+// label.forEach(lab => {
+//   console.log(lab);
+// })
+  
+
+
+
     // console.log(issue);
     const card = document.createElement("div");
 
@@ -170,7 +180,7 @@ const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${is
 const data = await res.json();
 // console.log(data,issueId);
 const plantDetails = data.data;
-console.log(plantDetails);
+// console.log(plantDetails);
 high.innerText = plantDetails.priority;
 title.innerText = plantDetails.title;
 description.innerText = plantDetails.description;
